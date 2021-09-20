@@ -23,7 +23,7 @@ enum ClientError \{
     #[error("Client error: \{}", _0)]
     Reqwest(reqwest::Error),
     #[error("URL error: \{}", _0)]
-    Url(url::ParseError),
+    Url(url_dep::ParseError),
     #[error("\{}", _0)]
     Api(self::client::ApiError<reqwest::Response>),
     #[error("")]
