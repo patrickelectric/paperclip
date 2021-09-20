@@ -287,7 +287,7 @@ pub trait Emitter: Sized {
 
             if let Some(port) = parts.next() {
                 let p = port.parse::<u16>().map_err(|_| {
-                    PaperClipError::InvalidHost(h.into(), url::ParseError::InvalidPort)
+                    PaperClipError::InvalidHost(h.into(), url_dep::ParseError::InvalidPort)
                 })?;
                 u.set_port(Some(p)).expect("expected valid port in URL?");
             }

@@ -75,6 +75,7 @@ pub enum DataTypeFormat {
     #[serde(rename = "date-time")]
     DateTime,
     Password,
+    Url,
     Uuid,
     #[serde(other)]
     Other,
